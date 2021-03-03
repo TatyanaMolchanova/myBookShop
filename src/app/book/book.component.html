@@ -1,0 +1,51 @@
+<mat-card>
+  <span matBadge="{{cartItemsNumber}}"
+        matBadgeOverlap="false">Items in Cart</span>
+</mat-card>
+
+<!--<mat-card>-->
+<!--  <mat-card-title>Books for Sale</mat-card-title>-->
+
+<!--  <mat-accordion>-->
+<!--    <mat-expansion-panel>-->
+<!--      -->
+<!--    </mat-expansion-panel>-->
+<!--  </mat-accordion>-->
+
+
+<!--</mat-card>-->
+
+<!--<h2>My Books</h2>-->
+
+<div class="book"
+  *ngFor="let book of books">
+  <ul>
+    <li>{{book.name}}</li>
+    <li>{{book.description}}</li>
+    <li>{{book.category}}</li>
+    <li>Was created: {{book.createDate}}</li>
+  </ul>
+  <strong>Price: {{book.price}}</strong>
+  <div>Is available: {{book.isAvailable ? 'Yes' : 'No'}}</div>
+
+  <button [disabled]="!book.isAvailable"
+    (click)="buy(book)">Buy</button>
+</div>
+
+<h2>My Books</h2>
+
+<!--<div class="book"-->
+<!--     *ngFor="let book of books">-->
+<!--  <ul>-->
+<!--    <li>{{book.name}}</li>-->
+<!--    <li>{{book.description}}</li>-->
+<!--    <li>{{book.category}}</li>-->
+<!--    <li>Was created: {{book.createDate}}</li>-->
+<!--  </ul>-->
+<!--  <strong>Price: {{book.price}}</strong>-->
+<!--  <div>Is available: {{book.isAvailable ? 'Yes' : 'No'}}</div>-->
+
+<!--  <button [disabled]="!book.isAvailable"-->
+<!--          (click)="buy(book)">Buy</button>-->
+<!--</div>-->
+
