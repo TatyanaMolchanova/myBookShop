@@ -1,5 +1,5 @@
 import {
-  Component,
+  Component, OnDestroy,
   OnInit
 } from '@angular/core';
 import {BookService} from "../shared/services/book.service";
@@ -22,7 +22,7 @@ export class BookComponent implements OnInit {
     this.getBooks();
     this.bookService.getTotalAmountInCart$.subscribe((totalAmount) => {
       this.cartItemsNumber = totalAmount;
-    })
+    });
   }
 
   buy(book: BookModel) {
@@ -32,6 +32,6 @@ export class BookComponent implements OnInit {
 
   private getBooks(): void {
     this.bookService.getBooks()
-      .subscribe(books => this.books = books)
+      .subscribe(books => this.books = books);
   }
 }

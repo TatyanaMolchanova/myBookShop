@@ -17,3 +17,9 @@ export enum BookCategory {
   IT = 'IT',
   Childish = 'Childish'
 }
+
+export interface ConfigOptions {
+  id: number;
+  login: string;
+  email: string;
+}

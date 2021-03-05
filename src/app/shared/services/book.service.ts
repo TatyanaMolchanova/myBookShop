@@ -1,7 +1,7 @@
-import {Injectable} from "@angular/core";
-import {Observable, of, Subject} from "rxjs";
-import {BookModel} from "../interfaces";
-import {BOOKS} from "../book-list";
+import {Injectable} from '@angular/core';
+import {Observable, of, Subject} from 'rxjs';
+import {BookModel} from '../interfaces';
+import {BOOKS} from '../book-list';
 
 @Injectable({
   providedIn: 'root'
@@ -39,6 +39,6 @@ export class BookService {
 
   removeBookFromCart(bookId) {
     this.boughtBooksList = this.boughtBooksList
-      .filter(book => book.id !== bookId)
+      .filter(book => book.id !== bookId);
   }
 }
