@@ -2,8 +2,10 @@ import {
   Component, OnDestroy,
   OnInit
 } from '@angular/core';
-import {BookService} from "../shared/services/book.service";
-import {BookModel} from "../shared/interfaces";
+import { BookService } from "../shared/services/book.service";
+import { BookModel } from "../shared/interfaces";
+import { FormGroup, FormControl } from '@angular/forms';
+// import { OrderByPipe } from '../shared/pipes/order-by.pipe';
 
 
 @Component({
@@ -16,10 +18,10 @@ export class BookComponent implements OnInit {
   books: BookModel[] = [];
   cartItemsNumber: number = 0;
 
-  constructor(private bookService: BookService) { }
+  constructor(public bookService: BookService) { }
 
   ngOnInit() {
-    this.getBooks();
+    // this.getBooks();
     this.bookService.getTotalAmountInCart$.subscribe((totalAmount) => {
       this.cartItemsNumber = totalAmount;
     });
@@ -30,7 +32,7 @@ export class BookComponent implements OnInit {
     this.bookService.addBook(book);
   }
 
-  private getBooks(): void {
+  getBooks(): void {
     this.bookService.getBooks()
       .subscribe(books => this.books = books);
   }

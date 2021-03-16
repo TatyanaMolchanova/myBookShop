@@ -4,7 +4,8 @@ export interface BookModel {
   description: string;
   price: number;
   category: BookCategory;
-  createDate: number;
+  createDate: Date;
+  // createDate: number;
   isAvailable: boolean;
   howMuchIsAddedToCart: number;
 }

@@ -10,7 +10,7 @@ export class LocalStorageService {
   constructor(@Inject(DOCUMENT) private document: Document) {
     this.storage = this.document.defaultView.localStorage;
 
-    console.log('this.storage', this.storage);
+    // console.log('this.storage', this.storage);
   }
 
   getItem(key: string): string | null {

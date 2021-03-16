@@ -20,8 +20,8 @@ export class AboutComponent implements OnInit {
     this.appVersion.getInfo();
     this.generator.generatorFactory(7);
 
-    console.log('1 about this.localStorage', this.localStorage);
-    console.log('this.appVersion', this.appVersion.getInfo());
-    console.log('this.generator.generatorFactory(5)', this.generator.generatorFactory(7));
+    // console.log('1 about this.localStorage', this.localStorage);
+    // console.log('this.appVersion', this.appVersion.getInfo());
+    // console.log('this.generator.generatorFactory(5)', this.generator.generatorFactory(7));
   }
 }

@@ -16,6 +16,15 @@ export class CartComponent implements OnInit, AfterContentChecked {
   itemsInCart: BookModel[] = [];
   totalItemsAmountInCart: number = 0;
   totalPriceInCart: number = 0;
+  sortByParams: string;
+  ascending: boolean = false;
+  color: string = '#fff';
+
+  sortParams = [
+    {value: 'name', viewValue: 'By name'},
+    {value: 'price', viewValue: 'By price'},
+    {value: 'howMuchIsAddedToCart', viewValue: 'By quantity'},
+  ];
 
   constructor(private bookService: BookService) {
   }
